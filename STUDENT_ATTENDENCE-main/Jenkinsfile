@@ -15,7 +15,7 @@ pipeline {
 
         stage('Backend Setup & Lint') {
             steps {
-                dir('stu-back') {
+                dir('STUDENT_ATTENDENCE-main/stu-back') {
                     echo 'Installing backend dependencies...'
                     bat 'npm install'
                     echo 'Backend setup complete.'
@@ -25,7 +25,7 @@ pipeline {
 
         stage('Frontend Build') {
             steps {
-                dir('stu-attendence') {
+                dir('STUDENT_ATTENDENCE-main/stu-attendence') {
                     echo 'Installing frontend dependencies...'
                     bat 'npm install'
                     echo 'Building frontend assets...'
@@ -37,9 +37,11 @@ pipeline {
 
         stage('Docker Containers Build') {
             steps {
-                echo 'Building Docker images via Docker Compose...'
-                bat 'docker-compose build'
-                echo 'Docker build completed successfully.'
+                dir('STUDENT_ATTENDENCE-main') {
+                    echo 'Building Docker images via Docker Compose...'
+                    bat 'docker-compose build'
+                    echo 'Docker build completed successfully.'
+                }
             }
         }
         
