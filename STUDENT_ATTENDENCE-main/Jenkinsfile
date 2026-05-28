@@ -1,0 +1,64 @@
+pipeline {
+    agent any
+
+    environment {
+        DOCKER_COMPOSE_VERSION = '1.29.2'
+    }
+
+    stages {
+        stage('Checkout') {
+            steps {
+                echo 'Checking out source code...'
+                checkout scm
+            }
+        }
+
+        stage('Backend Setup & Lint') {
+            steps {
+                dir('stu-back') {
+                    echo 'Installing backend dependencies...'
+                    bat 'npm install'
+                    echo 'Backend setup complete.'
+                }
+            }
+        }
+
+        stage('Frontend Build') {
+            steps {
+                dir('stu-attendence') {
+                    echo 'Installing frontend dependencies...'
+                    bat 'npm install'
+                    echo 'Building frontend assets...'
+                    bat 'npm run build'
+                    echo 'Frontend build complete.'
+                }
+            }
+        }
+
+        stage('Docker Containers Build') {
+            steps {
+                echo 'Building Docker images via Docker Compose...'
+                bat 'docker-compose build'
+                echo 'Docker build completed successfully.'
+            }
+        }
+        
+        stage('Deploy/Run Test') {
+            steps {
+                echo 'To run the containers, execute: docker-compose up -d'
+            }
+        }
+    }
+
+    post {
+        always {
+            echo 'Pipeline execution finished.'
+        }
+        success {
+            echo 'Rollcall build and Dockerization succeeded!'
+        }
+        failure {
+            echo 'Build failed. Please inspect build logs.'
+        }
+    }
+}
