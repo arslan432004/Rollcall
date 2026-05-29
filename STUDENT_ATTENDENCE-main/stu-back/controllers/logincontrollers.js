@@ -53,6 +53,7 @@ const logincontroller = async (req, res) => {
         id: user._id,
         email: user.email,
         role: user.role,
+        fullName: user.fullName,
       },
     });
 

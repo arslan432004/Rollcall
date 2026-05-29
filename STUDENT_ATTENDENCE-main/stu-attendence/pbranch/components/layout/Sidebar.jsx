@@ -52,7 +52,7 @@ const Sidebar = ({ isOpen, onClose }) => {
             <GraduationCap size={22} />
           </div>
           <div>
-            <p className="text-sm font-bold text-gray-900">Student Attendance</p>
+            <p className="text-sm font-bold text-gray-900">roll Arslan Ali call</p>
             <p className="text-xs text-gray-500">Management System</p>
           </div>
         </div>

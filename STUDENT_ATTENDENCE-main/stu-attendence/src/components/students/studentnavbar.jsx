@@ -31,7 +31,7 @@ navigate('/login');
             <Menu size={22} />
           </button>
           <span className="text-lg font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent hidden sm:block">
-            Rollcall
+            roll Arslan Ali call
           </span>
         </div>
 

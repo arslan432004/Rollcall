@@ -42,7 +42,7 @@ const StudentSidebar = ({ isOpen }) => {
             <FaPenFancy className="text-white text-lg" />
           </div>
           <div>
-            <h1 className="text-xl font-bold tracking-tight text-white">Rollcall</h1>
+            <h1 className="text-xl font-bold tracking-tight text-white">roll Arslan Ali call</h1>
             <p className="text-xs text-blue-400 font-medium">Student Portal</p>
           </div>
         </div>

@@ -12,6 +12,7 @@ const AuthPage = () => {
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [regnumber, setregnumber] = useState('');
+  const [loggedInUser, setLoggedInUser] = useState(null);
 
   // LOGIN VALIDATION ERRORS - ADD THIS
   const [loginErrors, setLoginErrors] = useState({});
@@ -19,6 +20,19 @@ const AuthPage = () => {
   // Login state
   const [loginEmail, setLoginEmail] = useState('');
   const [loginPassword, setLoginPassword] = useState('');
+
+  // Check for logged-in user on component mount
+  useEffect(() => {
+    const storedUser = localStorage.getItem('user');
+    if (storedUser) {
+      try {
+        const user = JSON.parse(storedUser);
+        setLoggedInUser(user);
+      } catch (error) {
+        console.error('Error parsing stored user:', error);
+      }
+    }
+  }, []);
 
 
 
@@ -289,7 +303,7 @@ const AuthPage = () => {
           </div>
           <div className="inline-block bg-white/10 backdrop-blur-md px-6 py-2 rounded-xl border border-white/10 shadow-2xl">
             <h2 className="text-2xl font-black tracking-wide bg-gradient-to-r from-blue-400 to-indigo-300 bg-clip-text text-transparent">
-              Roll Arslan Ali Call
+              roll Arslan Ali call
             </h2>
           </div>
           <p className="text-slate-400 mt-4 text-sm sm:text-base font-light">
