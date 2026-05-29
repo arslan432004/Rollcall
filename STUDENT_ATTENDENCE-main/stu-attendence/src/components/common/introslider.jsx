@@ -68,7 +68,7 @@ export default function Introslides() {
 
               <div className="inline-block bg-white/10 backdrop-blur-md px-8 py-3 rounded-2xl border border-white/10 shadow-2xl mb-6">
                 <h2 className="text-4xl sm:text-5xl md:text-6xl font-black tracking-wide bg-gradient-to-r from-blue-400 to-indigo-300 bg-clip-text text-transparent">
-                  Rollcall
+                  Roll Arslan Ali Call
                 </h2>
               </div>
 
@@ -103,7 +103,7 @@ export default function Introslides() {
                 Designed for Everyone
               </h2>
               <p className="text-slate-400 text-sm sm:text-base max-w-lg mb-8">
-                Rollcall streamlines administrative workflows, grading records, and attendance logs.
+                Roll Arslan Ali Call streamlines administrative workflows, grading records, and attendance logs.
               </p>
 
               {/* Grid of Glass Cards */}
@@ -172,7 +172,7 @@ export default function Introslides() {
               </div>
 
               <h2 className="text-4xl sm:text-5xl font-black tracking-tight mb-4">
-                Ready to Take Rollcall?
+                Ready to Take Roll Arslan Ali Call?
               </h2>
 
               <p className="text-slate-400 text-base sm:text-lg font-light leading-relaxed max-w-md mb-10">

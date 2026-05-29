@@ -1,16 +1,4 @@
-if (data.user.role === "teacher") {
-  navigate("/teacher/profile");
-} else if(data.user.role === "admin"){
-  navigate("/admin");
-} else {
-  navigate('/')  // ❌ WRONG: sends students to landing page!
-}if (data.user.role === "teacher") {
-  navigate("/teacher/profile");
-} else if(data.user.role === "admin"){
-  navigate("/admin");
-} else {
-  navigate('/')  // ❌ WRONG: sends students to landing page!
-}import { useState } from 'react';
+import { useState } from 'react';
 import { Users, Lock, Mail, Eye, EyeOff, User, Phone, Building } from 'lucide-react';
 import { use } from 'react';
 import { signupservice, loginservice } from '../Auth/services';
@@ -301,7 +289,7 @@ const AuthPage = () => {
           </div>
           <div className="inline-block bg-white/10 backdrop-blur-md px-6 py-2 rounded-xl border border-white/10 shadow-2xl">
             <h2 className="text-2xl font-black tracking-wide bg-gradient-to-r from-blue-400 to-indigo-300 bg-clip-text text-transparent">
-              Rollcall
+              Roll Arslan Ali Call
             </h2>
           </div>
           <p className="text-slate-400 mt-4 text-sm sm:text-base font-light">
